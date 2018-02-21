@@ -3,10 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Pharmacy</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<form>
+<div class="mediFormcontainer col-lg-12 col-md-12">
+<form name="myForm" action="" onSubmit="return  validateForm()" method="post" class="col-md-3 col-lg-3 col-lg-offset-4 mediForm">
+
+
+
+
+    <div class="form-group">
+        <label >Medicine Name: </label>
+        <input type="text" name="name" class="form-control" id="mediName" required>
+      </div>
+     <div class="form-group">
+        <label for="">Medicine Type: </label>
+         <select id="mediType" onchange="medicineType()">select type of medicine
+             <option value="Tablet">Tablet
+             <option value="Syrup">Syrup
+         </select>
+    </div>
+    <div class="form-group countOfTablet" style="display: none;">
+        <label for=""> Tablet in strip: </label>
+        <input type="number"  class="form-control tabletCount" required>
+    </div>
+    <div class="form-group quantityOfsyrub" style="display: none;">
+        <label for="">syrub: </label>
+        <input type="number"  class="form-control quanSyrub" required>
+    </div>
+
+    <div class="form-group">
+        <label for="">Price: </label>
+        <input type="number" name="price" class="form-control mediPrice" required>
+    </div>
+    <div class="form-group">
+        <label for="">quantity: </label>
+        <input type="text" name="qty" class="form-control mediQty" required>
+    </div>
+    <div class="form-group">
+        <label for=""> position of tablet: </label>
+        <select class="col-lg-6">row<option>A </option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+        </select>
+        <select class="col-lg-6 placeOfTablet">column
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option></select>
+    </div>
+    <div class="form-group">
+        <label for=""> symptoms </label>
+        <textarea class=" form-control col-lg-12 mediSymptoms" rows="3" ></textarea>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
+</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+
+
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,2 +1,6 @@
 .clr{clear:both;}
 .float-L{float:left}
+.mediForm{margin:0 auto;
+background:#ccc;
+width:300px;text-align:center;padding:20px;}
+.countOfTablet,.quantityOfsyrub{display:none;}
