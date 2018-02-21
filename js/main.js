@@ -1,24 +1,28 @@
+var medicineName,medicinePrice,medicineQty,placeofPosition,medicineSymptoms;
+
+medicineName = document.querySelector('#mediName');
+medicinePrice = document.querySelector('#mediPrice');
+medicineQty = document.querySelector('#mediQty');
+placeofPosition = document.querySelector('#placeOfTablet');
+medicineSymptoms = document.querySelector('#mediSymptoms');
+
 function validateForm() {
-    var medicineName = document.getElementById('mediName').value;
-    var medicinePrice=document.getElementsByClassName('mediPrice').value;
-    var medicineQty=document.getElementsByClassName('mediQty').value;
-    var placeofPosition=document.getElementsByClassName('placeOfTablet').value;
-    var medicineSymptoms=document.getElementsByClassName('mediSymptoms').value;
-    alert(medicineName + medicinePrice + medicineQty +medicineSymptoms + placeofPosition);
+    alert(medicineName.value + medicinePrice.value + medicineQty.value +medicineSymptoms.value + placeofPosition.value);
 
 }
 
 function medicineType(){
     var x = document.getElementById("mediType").value;
-    // document.getElementById("demo").innerHTML = "You selected: " + x;
-    if(x==="Tablet"){
-        document.getElementsByClassName("countOfTablet").style.display = "block";
 
+    if( x === "Tablet" ){
+
+        document.querySelector(".countOfTablet").style.display="block";
+        document.querySelector(".quantityOfsyrub").style.display="none";
         }
 
     if(x==="Syrup"){
-        document.getElementsByClassName("quantityOfsyrub").style.display = "block";
-
+        document.querySelector(".quantityOfsyrub").style.display="block";
+        document.querySelector(".countOfTablet").style.display="none";
     }
 
 

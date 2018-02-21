@@ -9,48 +9,53 @@
 </head>
 <body>
 <div class="mediFormcontainer col-lg-12 col-md-12">
-<form name="myForm" action="" onSubmit="return  validateForm()" method="post" class="col-md-3 col-lg-3 col-lg-offset-4 mediForm">
+<form onSubmit="validateForm()" class="col-md-3 col-lg-3 col-lg-offset-4 mediForm">
 
 
 
 
     <div class="form-group">
         <label >Medicine Name: </label>
-        <input type="text" name="name" class="form-control" id="mediName" required>
+        <input type="text" class="form-control" id="mediName" required>
       </div>
      <div class="form-group">
         <label for="">Medicine Type: </label>
-         <select id="mediType" onchange="medicineType()">select type of medicine
+         <select id="mediType" onchange="medicineType()">
+             <option>select type of medicine</option>
              <option value="Tablet">Tablet
              <option value="Syrup">Syrup
          </select>
     </div>
     <div class="form-group countOfTablet" style="display: none;">
         <label for=""> Tablet in strip: </label>
-        <input type="number"  class="form-control tabletCount" required>
+        <input type="number"  class="form-control" id=tabletCount" required>
     </div>
     <div class="form-group quantityOfsyrub" style="display: none;">
         <label for="">syrub: </label>
-        <input type="number"  class="form-control quanSyrub" required>
+        <input type="number"  class="form-control" id="quanSyrub" >
     </div>
 
     <div class="form-group">
         <label for="">Price: </label>
-        <input type="number" name="price" class="form-control mediPrice" required>
+        <input type="number" name="price" class="form-control" id="mediPrice" >
+
     </div>
     <div class="form-group">
         <label for="">quantity: </label>
-        <input type="text" name="qty" class="form-control mediQty" required>
+        <input type="text" name="qty" class="form-control" id="mediQty" required>
     </div>
     <div class="form-group">
         <label for=""> position of tablet: </label>
-        <select class="col-lg-6">row<option>A </option>
+        <select class="col-lg-6 id="placeOfTablet-row">
+             <option> row</option>
+             <option>A </option>
             <option>B</option>
             <option>C</option>
             <option>D</option>
             <option>E</option>
         </select>
-        <select class="col-lg-6 placeOfTablet">column
+        <select class="col-lg-6" id="placeOfTablet">
+            <option>column</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -58,7 +63,7 @@
     </div>
     <div class="form-group">
         <label for=""> symptoms </label>
-        <textarea class=" form-control col-lg-12 mediSymptoms" rows="3" ></textarea>
+        <textarea class=" form-control col-lg-12" id="mediSymptoms" rows="3" ></textarea>
     </div>
 
 
